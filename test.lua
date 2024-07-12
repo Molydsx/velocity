@@ -36,12 +36,7 @@ local Tables = {
     makefolder("eclipse.wtf")
  end
  
- ---// Variables
- local Camera = game:GetService("Workspace").Camera
- local RunService = game:GetService("RunService")
- local Mouse = game:GetService("Players").LocalPlayer:GetMouse()
- local InputService = game:GetService("UserInputService")
- local TweenService = game:GetService("TweenService")
+
  
  --// LPH
  if not LPH_OBFUSCATED then
