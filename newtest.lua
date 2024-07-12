@@ -119,7 +119,7 @@ local Camera = Workspace.CurrentCamera
  ProtectGui(ScreenGui)
  ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Global
  ScreenGui.Parent = game.CoreGui
- ScreenGui.Name = "velocity_menu"
+ ScreenGui.Name = "VitalUi"
  menu.bg.pre.Text = ""
  
  task.spawn(function()
