@@ -32,8 +32,8 @@ local Tables = {
     task.wait()
  until game:IsLoaded()
  
- if not isfile("eclipse.wtf") then
-    makefolder("eclipse.wtf")
+ if not isfile("vital.wft") then
+    makefolder("vital.wft")
  end
  
  ---// Variables
@@ -145,7 +145,7 @@ local Camera = Workspace.CurrentCamera
                 wait(0.5)
             end 
         else
-            menu.bg.pre.Text = 'eclipse.wtf | <font color="rgb(189, 172, 255)">fallen</font>'
+            menu.bg.pre.Text = 'vital.wft | <font color="rgb(189, 172, 255)">Beta</font>'
         end
     end
  end)  
@@ -1881,7 +1881,7 @@ local Camera = Workspace.CurrentCamera
                                   if v == x then return true end
                                   end return false end
                                   function library:createConfig()
-                                     makefolder("eclipse.wtf")
+                                     makefolder("vital.wft")
                                      local name = library.flags["config_name"]
                                      if contains(library.options["config_box"].values, name) then return library:Notify(name..".cfg already exists!", 5) end
                                      if name == "" then return library:Notify("You need to put a name in!", 5) end
@@ -1893,13 +1893,13 @@ local Camera = Workspace.CurrentCamera
                                      else jig[i] = v
                                      end
                                   end
-                                  writefile("eclipse.wtf/"..name..".cfg",game:GetService("HttpService"):JSONEncode(jig))
+                                  writefile("vital.wft/"..name..".cfg",game:GetService("HttpService"):JSONEncode(jig))
                                   library:Notify("Succesfully created config "..name..".cfg!", 5)
                                   library:refreshConfigs()
                                end
  
                                function library:saveConfig()
-                                  makefolder("eclipse.wtf")
+                                  makefolder("vital.wft")
                                   local name = library.flags["config_box"]
                                   local jig = {}
                                   for i,v in next, library.flags do
@@ -1949,7 +1949,7 @@ local Camera = Workspace.CurrentCamera
  
                                   function library:refreshConfigs()
                                      local tbl = {}
-                                     for i,v in next, listfiles("eclipse.wtf") do table.insert(tbl,v) end
+                                     for i,v in next, listfiles("vital.wft") do table.insert(tbl,v) end
                                      library.options["config_box"].refresh(tbl)
                                   end
                                end)()
