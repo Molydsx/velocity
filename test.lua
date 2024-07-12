@@ -64,7 +64,7 @@ local Camera = Workspace.CurrentCamera
  local tabviewer = menu.bg.bg.bg.bg.bg.bg.tabbuttons
  
  local library = {
-    Title = 'eclipse.wtf | <font color="rgb(189, 172, 255)">fallen</font>',
+    Title = 'Vital.wtf | <font color="rgb(189, 172, 255)">Beta</font>',
     AnimatedText = false,
     keybind = Enum.KeyCode.End,
     Colors = {
