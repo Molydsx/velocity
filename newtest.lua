@@ -1,5 +1,6 @@
 local Tables = {
     "Internal",
+    "HttpCache",
     "Instances",
     "Signals",
     "Script",
@@ -20,7 +21,7 @@ local Tables = {
     "Animation",
     "Navigation",
     "GeometryCSG"
- }
+}
  
 
  ------ * Velocity Ui * ------
@@ -124,19 +125,19 @@ local Camera = Workspace.CurrentCamera
  
  task.spawn(function()
     local textList = { 
-        '', 'e', 'ec', 'ecl', 'ecli', 'eclip', 'eclipse', 'eclipse.', 'eclipse.<font color="rgb(189, 172, 255)">w</font>',
-        'eclipse.<font color="rgb(189, 172, 255)">wt</font>', 'eclipse.<font color="rgb(189, 172, 255)">wtf</font>',
-        'eclipse.<font color="rgb(189, 172, 255)">wtf</font> |', 'eclipse.<font color="rgb(189, 172, 255)">wtf</font> | u',
-        'eclipse.<font color="rgb(189, 172, 255)">wtf</font> | un', 'eclipse.<font color="rgb(189, 172, 255)">wtf</font> | uni',
-        'eclipse.<font color="rgb(189, 172, 255)">wtf</font> | univ', 'eclipse.<font color="rgb(189, 172, 255)">wtf</font> | univers',
-        'eclipse.<font color="rgb(189, 172, 255)">wtf</font> | universa', 'eclipse.<font color="rgb(189, 172, 255)">wtf</font> | universal',
-        'eclipse.<font color="rgb(189, 172, 255)">wtf</font> | universa', 'eclipse.<font color="rgb(189, 172, 255)">wtf</font> | univers',
-        'eclipse.<font color="rgb(189, 172, 255)">wtf</font> | univer', 'eclipse.<font color="rgb(189, 172, 255)">wtf</font> | unive',
-        'eclipse.<font color="rgb(189, 172, 255)">wtf</font> | univ', 'eclipse.<font color="rgb(189, 172, 255)">wtf</font> | uni',
-        'eclipse.<font color="rgb(189, 172, 255)">wtf</font> | un', 'eclipse.<font color="rgb(189, 172, 255)">wtf</font> | u',
-        'eclipse.<font color="rgb(189, 172, 255)">wtf</font> |', 'eclipse.<font color="rgb(189, 172, 255)">wtf</font>',
-        'eclipse.<font color="rgb(189, 172, 255)">wt</font>', 'eclipse.<font color="rgb(189, 172, 255)">w</font>',
-        'eclipse.', 'eclipse', 'eclips', 'eclip', 'ecli', 'ecl', 'ec', 'e'
+        '', 'v', 'vi', 'vit', 'vita', 'vital', 'vital.', 'vital.', 'vital.<font color="rgb(189, 172, 255)">w</font>',
+        'vital.<font color="rgb(189, 172, 255)">wt</font>', 'vital.<font color="rgb(189, 172, 255)">wtf</font>',
+        'vital.<font color="rgb(189, 172, 255)">wtf</font> |', 'vital.<font color="rgb(189, 172, 255)">wtf</font> | u',
+        'vital.<font color="rgb(189, 172, 255)">wtf</font> | un', 'vital.<font color="rgb(189, 172, 255)">wtf</font> | uni',
+        'vital.<font color="rgb(189, 172, 255)">wtf</font> | univ', 'vital.<font color="rgb(189, 172, 255)">wtf</font> | univers',
+        'vital.<font color="rgb(189, 172, 255)">wtf</font> | universa', 'vital.<font color="rgb(189, 172, 255)">wtf</font> | universal',
+        'vital.<font color="rgb(189, 172, 255)">wtf</font> | universa', 'vital.<font color="rgb(189, 172, 255)">wtf</font> | univers',
+        'vital.<font color="rgb(189, 172, 255)">wtf</font> | univer', 'vital.<font color="rgb(189, 172, 255)">wtf</font> | unive',
+        'vital.<font color="rgb(189, 172, 255)">wtf</font> | univ', 'vital.<font color="rgb(189, 172, 255)">wtf</font> | uni',
+        'vital.<font color="rgb(189, 172, 255)">wtf</font> | un', 'vital.<font color="rgb(189, 172, 255)">wtf</font> | u',
+        'vital.<font color="rgb(189, 172, 255)">wtf</font> |', 'vital.<font color="rgb(189, 172, 255)">wtf</font>',
+        'vital.<font color="rgb(189, 172, 255)">wt</font>', 'vital.<font color="rgb(189, 172, 255)">w</font>',
+        'vital.', 'vital', 'vital', 'vital', 'vita', 'vit', 'vi', 'v'
     }
     while wait(0.5) do
         if library.AnimatedText then
