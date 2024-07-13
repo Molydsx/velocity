@@ -17,10 +17,10 @@ repeat
  local tabviewer = menu.bg.bg.bg.bg.bg.bg.tabbuttons;
  for _, obj in pairs(menu:GetDescendants()) do
     if obj.Name:lower():find('userlabel') then
-        obj.Text = 'Day remain: <font color="rgb(115, 100, 215)">' .. game.Players.LocalPlayer.Name .. '</font>'
+        obj.Text = 'active user: <font color="rgb(115, 100, 215)">' .. game.Players.LocalPlayer.Name .. '</font>'
     end
     if obj.Name:lower():find('buildlabel') then
-        obj.Text = 'build: <font color="rgb(115, 100, 215)">v3.1.0</font>'
+        obj.Text = 'build: <font color="rgb(115, 100, 215)">Public</font>'
     end
  end
  
@@ -297,7 +297,7 @@ repeat
  end
  
  local library = {
-    Title = 'Vital.<font color="rgb(115, 100, 215)">wtf</font> || DEV',
+    Title = 'Vital.<font color="rgb(115, 100, 215)">wtf</font> || fallen',
     keybind = Enum.KeyCode.RightBracket,
     Watermark = createWatermark(),
        Colors = {
@@ -349,13 +349,13 @@ repeat
     
     menu.bg.Position = UDim2.new(0.5,-menu.bg.Size.X.Offset/2,0.5,-menu.bg.Size.Y.Offset/2)
     menu.Parent = CloneCore
-    menu.Name = "Vital_gui"
+    menu.Name = "vital_gui"
     local ProtectGui = protectgui or (syn and syn.protect_gui) or (function() end)
     local CloneScreenGui = cloneref(Instance.new("ScreenGui"))
     ProtectGui(CloneScreenGui)   
     CloneScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Global
     CloneScreenGui.Parent = CloneCore
-    CloneScreenGui.Name = "Vital_gui"
+    CloneScreenGui.Name = "vital_gui"
  
     local menu_text_label = Instance.new("TextLabel", menu.bg)
     menu_text_label.Name = "pre"
