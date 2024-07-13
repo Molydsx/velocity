@@ -25,7 +25,8 @@ repeat
  end
  
  --vars
- local CloneCore = cloneref(game.CoreGui)
+ local CloneCore =  game:GetService("CoreGui")
+
  local CloneScreenGui = cloneref(Instance.new("ScreenGui"))
  local RunService = game:GetService("RunService")
  local Mouse = game:GetService("Players").LocalPlayer:GetMouse()
@@ -362,6 +363,11 @@ repeat
     CloneScreenGui.Parent = CloneCore
     CloneScreenGui.Name = "vital_gui"
  
+
+
+    
+
+
     local menu_text_label = Instance.new("TextLabel", menu.bg)
     menu_text_label.Name = "pre"
     menu_text_label.RichText = true
