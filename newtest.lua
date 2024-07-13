@@ -390,7 +390,7 @@ repeat
     BuildLabel.Size = UDim2.new(-0.00151476054, 200, 2.14484048, -1)
     BuildLabel.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
     BuildLabel.RichText = true
-    BuildLabel.Text = "build: <font color=\"rgb(115, 100, 215)\">public</font>"
+    BuildLabel.Text = "build: <font color=\"rgb(115, 100, 215)\">Beta Acces</font>"
     BuildLabel.TextColor3 = Color3.fromRGB(74, 74, 74)
     BuildLabel.TextSize = 10
     BuildLabel.TextWrapped = true
@@ -405,7 +405,7 @@ repeat
     ActiveUserLabel.Size = UDim2.new(0.00125635799, 200, 4.04341888, -1)
     ActiveUserLabel.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
     ActiveUserLabel.RichText = true
-    ActiveUserLabel.Text = "active user: <font color=\"rgb(115, 100, 215)\">7d</font>"
+    ActiveUserLabel.Text = "Day Remain: <font color=\"rgb(115, 100, 215)\">7 Day</font>"
     ActiveUserLabel.TextColor3 = Color3.fromRGB(74, 74, 74)
     ActiveUserLabel.TextSize = 10
     ActiveUserLabel.TextXAlignment = Enum.TextXAlignment.Right
