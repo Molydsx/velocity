@@ -331,7 +331,7 @@ repeat
  end
  
  local library = {
-    Title = 'Vital<font color="rgb(15, 159, 196)">wft</font>|  Paid  | Apocalypse Rising 2',
+    Title = '<font color="rgb(15, 159, 196)">Vital.wft</font>|  <font color="rgb(255, 0, 0)">Paid</font>  | <font color="rgb(0, 255, 0)">Apocalypse Rising 2</font> ',
     keybind = Enum.KeyCode.RightBracket,
     Watermark = createWatermark(),
        Colors = {
@@ -401,7 +401,7 @@ repeat
     menu_text_label.FontFace = Fonts.ProggyTiny
     menu_text_label.Text = library.Title
     menu_text_label.TextColor3 = Color3.fromRGB(75, 75, 75)
-    menu_text_label.TextSize = 11
+    menu_text_label.TextSize = 9
     menu_text_label.TextStrokeTransparency = 0.000
  
     local BottomBar = Instance.new("Frame", menu.bg)
@@ -439,7 +439,7 @@ repeat
     ActiveUserLabel.Size = UDim2.new(0.00125635799, 200, 4.04341888, -1)
     ActiveUserLabel.FontFace = Fonts.ProggyTiny
     ActiveUserLabel.RichText = true
-    ActiveUserLabel.Text = "Vital.wtf: <font color=\"rgb(15, 159, 196)\"Apocalypse Rising 2|Private</font>"
+    ActiveUserLabel.Text = "Vital.wtf: <font color=\"rgb(15, 159, 196)\">Apocalypse Rising 2</font>"
     ActiveUserLabel.TextColor3 = Color3.fromRGB(74, 74, 74)
     ActiveUserLabel.TextSize = 9
     ActiveUserLabel.TextXAlignment = Enum.TextXAlignment.Right
