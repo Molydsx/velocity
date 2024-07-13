@@ -601,7 +601,7 @@ repeat
  
                         table.insert(library.tabs,newTab)
                         newTab.Parent = tabholder
-                        newTab.Visible = true
+                        newTab.Visible = false
  
                         table.insert(library.tabbuttons,newButton)
                         newButton.Parent = tabviewer
