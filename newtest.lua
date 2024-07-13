@@ -12,15 +12,15 @@ repeat
     makefolder("vital.wtf")
  end
  
- local menu = game:GetObjects("rbxassetid://")[1] 
+ local menu = game:GetObjects("rbxassetid://17171194056")[1] 
  local tabholder = menu.bg.bg.bg.bg.bg.bg.main.group;
  local tabviewer = menu.bg.bg.bg.bg.bg.bg.tabbuttons;
  for _, obj in pairs(menu:GetDescendants()) do
     if obj.Name:lower():find('userlabel') then
-        obj.Text = 'active user: <font color="rgb(115, 100, 215)">' .. game.Players.LocalPlayer.Name .. '</font>'
+        obj.Text = ': <font color="rgb(115, 100, 215)">' ..  .. '</font>'
     end
     if obj.Name:lower():find('buildlabel') then
-        obj.Text = 'build: <font color="rgb(115, 100, 215)">Public</font>'
+        obj.Text = 'build: <font color="rgb(115, 100, 215)">Paid</font>'
     end
  end
  
