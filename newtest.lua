@@ -238,7 +238,7 @@ repeat
     WaterMarkLabel.RichText = true
     WaterMarkLabel.Text = "Build: Private"
     WaterMarkLabel.TextColor3 = Color3.fromRGB(152, 152, 152)
-    WaterMarkLabel.TextSize = 10
+    WaterMarkLabel.TextSize = 14
     WaterMarkLabel.TextWrapped = false
     
     WaterMarkLabel:GetPropertyChangedSignal("TextBounds"):Connect(function()
@@ -319,7 +319,7 @@ repeat
  end
  
  local library = {
-    Title = '<font color="rgb(115, 100, 215)">Vital.wtf</font> || Beta Acces',
+    Title = '<font color="rgb(115, 100, 215)">Vital.wtf</font>  <font color="rgb(0, 255, 0)">Beta Acces</font>',
     keybind = Enum.KeyCode.End,
     Watermark = createWatermark(),
        Colors = {
