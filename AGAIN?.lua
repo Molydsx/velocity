@@ -107,7 +107,7 @@ repeat
   Gradient.Position = UDim2.new(0, 0, 0, 1)
   Gradient.Size = UDim2.new(0, 180, 0, 1)
   
-  KeybindGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(0.50, Color3.fromRGB(115, 100, 215)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))}
+  KeybindGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(0.50, Color3.fromRGB(15, 159, 196)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))}
   
   Name.Name = "Name"
   Name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -116,7 +116,7 @@ repeat
   Name.BorderSizePixel = 0
   Name.Size = UDim2.new(0, 175, 0, 28)
   Name.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
-  Name.Text = "[<font color=\"rgb(115, 100, 215)\">Keybinds</font>]"
+  Name.Text = "[<font color=\"rgb(15, 159, 196)\">Keybinds</font>]"
   Name.TextColor3 = Color3.fromRGB(255, 255, 255)
   Name.TextSize = 10
   Name.RichText = true
@@ -149,7 +149,7 @@ repeat
   Name_2.Position = UDim2.new(0.5, 0, -1.85000002, 0)
   Name_2.Size = UDim2.new(1, 0, 1, 0)
   Name_2.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
-  Name_2.Text = "Silent Aim: <font color=\"rgb(115, 100, 215)\">[MB1]</font>"
+  Name_2.Text = "Silent Aim: <font color=\"rgb(15, 159, 196)\">[MB1]</font>"
   Name_2.TextColor3 = Color3.fromRGB(125, 125, 125)
   Name_2.TextSize = 10
   Name_2.BorderSizePixel = 1
@@ -165,7 +165,7 @@ repeat
   Name_3.Position = UDim2.new(0.5, 0, -1.85000002, 0)
   Name_3.Size = UDim2.new(1, 0, 1, 0)
   Name_3.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
-  Name_3.Text = "AimBot (Head): <font color=\"rgb(115, 100, 215)\">[MB2]</font>"
+  Name_3.Text = "AimBot (Head): <font color=\"rgb(15, 159, 196)\">[MB2]</font>"
   Name_3.TextColor3 = Color3.fromRGB(125, 125, 125)
   Name_3.TextSize = 10
   Name_3.BorderSizePixel = 1
@@ -180,7 +180,7 @@ repeat
   Name_4.Position = UDim2.new(0.5, 0, -1.85000002, 0)
   Name_4.Size = UDim2.new(1, 0, 1, 0)
   Name_4.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
-  Name_4.Text = "Speed Hack: <font color=\"rgb(115, 100, 215)\">[Right Shift]</font>"
+  Name_4.Text = "Speed Hack: <font color=\"rgb(15, 159, 196)\">[Right Shift]</font>"
   Name_4.TextColor3 = Color3.fromRGB(125, 125, 125)
   Name_4.TextSize = 10
   Name_4.BorderSizePixel = 1
@@ -324,14 +324,14 @@ repeat
          local ping = string.format('%.0f', game.Stats.Network.ServerStatsItem["Data Ping"]:GetValue())
          local uid = "1"
          local fpsValue = string.split(game.Stats.Workspace.Heartbeat:GetValueString(), ".")[1]
-         WaterMarkLabel.Text = 'eclipse.<font color="rgb(15, 159, 196)">wtf</font> - uid: <font color="rgb(15, 159, 196)">' .. uid .. '</font> / fps: <font color="rgb(15, 159, 196)">' .. fpsValue .. '</font> / ping: <font color="rgb(15, 159, 196)">' .. ping .. '</font> / time: <font color="rgb(15, 159, 196)">' .. time .. '</font>'
+         WaterMarkLabel.Text = 'Vital.<font color="rgb(15, 159, 196)">wtf</font> - uid: <font color="rgb(15, 159, 196)">' .. uid .. '</font> / fps: <font color="rgb(15, 159, 196)">' .. fpsValue .. '</font> / ping: <font color="rgb(15, 159, 196)">' .. ping .. '</font> / time: <font color="rgb(15, 159, 196)">' .. time .. '</font>'
        end
     end)
     return Watermark
  end
  
  local library = {
-    Title = 'Wire<font color="rgb(15, 159, 196)">less</font> || State of Anarchy',
+    Title = 'Vital<font color="rgb(15, 159, 196)">wft</font>|  Paid  | Apocalypse Rising 2',
     keybind = Enum.KeyCode.RightBracket,
     Watermark = createWatermark(),
        Colors = {
