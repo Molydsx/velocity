@@ -8,8 +8,8 @@ repeat
  until game:IsLoaded()
  
  -- Menu/UI Creation
- if not isfile("vital.wtf") then
-    makefolder("vital.wtf")
+ if not isfile("wireless") then
+    makefolder("wireless")
  end
  
  local menu = game:GetObjects("rbxassetid://17171194056")[1] 
@@ -17,27 +17,21 @@ repeat
  local tabviewer = menu.bg.bg.bg.bg.bg.bg.tabbuttons;
  for _, obj in pairs(menu:GetDescendants()) do
     if obj.Name:lower():find('userlabel') then
-        obj.Text = 'active user: <font color="rgb(115, 100, 215)">' .. game.Players.LocalPlayer.Name .. '</font>'
+        obj.Text = 'active user: <font color="rgb(15, 159, 196)">' .. game.Players.LocalPlayer.Name .. '</font>'
     end
     if obj.Name:lower():find('buildlabel') then
-        obj.Text = 'build: <font color="rgb(115, 100, 215)">Public</font>'
+        obj.Text = 'build: <font color="rgb(15, 159, 196)">Public</font>'
     end
  end
  
  --vars
- local CloneCore =  game:GetService("CoreGui")
-
+ local CloneCore = cloneref(game.CoreGui)
  local CloneScreenGui = cloneref(Instance.new("ScreenGui"))
  local RunService = game:GetService("RunService")
  local Mouse = game:GetService("Players").LocalPlayer:GetMouse()
  local InputService = game:GetService("UserInputService")
  local TweenService = game:GetService("TweenService")
  local HttpService = cloneref(game:GetService("HttpService"))
- local Camera = Workspace.CurrentCamera
- local RunService = game:GetService("RunService")
- local Mouse = game:GetService("Players").LocalPlayer:GetMouse()
- local InputService = game:GetService("UserInputService")
- local TweenService = game:GetService("TweenService")
  
  --// LPH
  if not LPH_OBFUSCATED then
@@ -49,6 +43,7 @@ repeat
     LPH_ENCSTR = function(...) return ... end
     LPH_STRENC = function(...) return ... end
     LPH_HOOK_FIX = function(...) return ... end
+    LPH_CRASH = function() return print(debug.traceback()) end
  end
  
  -- custom fonts
@@ -112,7 +107,7 @@ repeat
  Gradient.Position = UDim2.new(0, 0, 0, 1)
  Gradient.Size = UDim2.new(0, 180, 0, 1)
  
- KeybindGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(0.50, Color3.fromRGB(115, 100, 215)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))}
+ KeybindGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(0, 0, 0)), ColorSequenceKeypoint.new(0.50, Color3.fromRGB(15, 159, 196)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(0, 0, 0))}
  
  Name.Name = "Name"
  Name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -121,7 +116,7 @@ repeat
  Name.BorderSizePixel = 0
  Name.Size = UDim2.new(0, 175, 0, 28)
  Name.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
- Name.Text = "[<font color=\"rgb(115, 100, 215)\">Keybinds</font>]"
+ Name.Text = "[<font color=\"rgb(15, 159, 196)\">Keybinds</font>]"
  Name.TextColor3 = Color3.fromRGB(255, 255, 255)
  Name.TextSize = 10
  Name.RichText = true
@@ -154,7 +149,7 @@ repeat
  Name_2.Position = UDim2.new(0.5, 0, -1.85000002, 0)
  Name_2.Size = UDim2.new(1, 0, 1, 0)
  Name_2.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
- Name_2.Text = "Silent Aim: <font color=\"rgb(115, 100, 215)\">[MB1]</font>"
+ Name_2.Text = "Silent Aim: <font color=\"rgb(15, 159, 196)\">[MB1]</font>"
  Name_2.TextColor3 = Color3.fromRGB(125, 125, 125)
  Name_2.TextSize = 10
  Name_2.BorderSizePixel = 1
@@ -170,7 +165,7 @@ repeat
  Name_3.Position = UDim2.new(0.5, 0, -1.85000002, 0)
  Name_3.Size = UDim2.new(1, 0, 1, 0)
  Name_3.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
- Name_3.Text = "AimBot (Head): <font color=\"rgb(115, 100, 215)\">[MB2]</font>"
+ Name_3.Text = "AimBot (Head): <font color=\"rgb(15, 159, 196)\">[MB2]</font>"
  Name_3.TextColor3 = Color3.fromRGB(125, 125, 125)
  Name_3.TextSize = 10
  Name_3.BorderSizePixel = 1
@@ -185,16 +180,14 @@ repeat
  Name_4.Position = UDim2.new(0.5, 0, -1.85000002, 0)
  Name_4.Size = UDim2.new(1, 0, 1, 0)
  Name_4.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
- Name_4.Text = "Speed Hack: <font color=\"rgb(115, 100, 215)\">[Right Shift]</font>"
+ Name_4.Text = "Speed Hack: <font color=\"rgb(15, 159, 196)\">[Right Shift]</font>"
  Name_4.TextColor3 = Color3.fromRGB(125, 125, 125)
  Name_4.TextSize = 10
  Name_4.BorderSizePixel = 1
  Name_4.RichText = true
  Name_4.Visible = true
 
-
-
-
+ 
  local dragging
  local dragInput
  local dragStart
@@ -241,10 +234,10 @@ repeat
     
     WatermarkFrame.Parent = WatermarkGui
     WatermarkFrame.BackgroundColor3 = Color3.fromRGB(11, 11, 11)
-    WatermarkFrame.BorderColor3 = Color3.fromRGB(115, 100, 215)
+    WatermarkFrame.BorderColor3 = Color3.fromRGB(15, 159, 196)
     WatermarkFrame.BorderSizePixel = 2
     WatermarkFrame.Position = UDim2.new(0.0452012382, 33, 0.0223325081, -48)
-    WatermarkFrame.Size = UDim2.new(0, 300, 0, 20)
+    WatermarkFrame.Size = UDim2.new(0, 200, 0, 20)
     WatermarkFrame.Visible = true
     
     WaterMarkLabel.Parent = WatermarkFrame
@@ -253,11 +246,11 @@ repeat
     WaterMarkLabel.BorderColor3 = Color3.fromRGB(0, 0, 0)
     WaterMarkLabel.BorderSizePixel = 0
     WaterMarkLabel.Position = UDim2.new(0, 0, 0, 0)
-    WaterMarkLabel.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
+    WaterMarkLabel.FontFace = Fonts.ProggyTiny
     WaterMarkLabel.RichText = true
     WaterMarkLabel.Text = "Build: Private"
     WaterMarkLabel.TextColor3 = Color3.fromRGB(152, 152, 152)
-    WaterMarkLabel.TextSize = 14
+    WaterMarkLabel.TextSize = 9
     WaterMarkLabel.TextWrapped = false
     
     WaterMarkLabel:GetPropertyChangedSignal("TextBounds"):Connect(function()
@@ -331,22 +324,22 @@ repeat
          local ping = string.format('%.0f', game.Stats.Network.ServerStatsItem["Data Ping"]:GetValue())
          local uid = "1"
          local fpsValue = string.split(game.Stats.Workspace.Heartbeat:GetValueString(), ".")[1]
-         WaterMarkLabel.Text = 'Vital.<font color="rgb(115, 100, 215)">wtf</font> - uid: <font color="rgb(115, 100, 215)">' .. uid .. '</font> / fps: <font color="rgb(115, 100, 215)">' .. fpsValue .. '</font> / ping: <font color="rgb(115, 100, 215)">' .. ping .. '</font> / time: <font color="rgb(115, 100, 215)">' .. time .. '</font>'
+         WaterMarkLabel.Text = 'Vital.wtf<font color="rgb(74, 74, 74)"></font> - uid: <font color="rgb(74, 74, 74)">' .. uid .. '</font> / fps: <font color="rgb(255,171,187)">' .. fpsValue .. '</font> / ping: <font color="rgb(255,171,187)">' .. ping .. '</font> / time: <font color="rgb(255,171,187)">' .. time .. '</font>'
        end
     end)
     return Watermark
  end
  
  local library = {
-    Title = '<font color="rgb(115, 100, 215)">Vital.wft</font>. <font color="rgb(255, 0, 0)">Beta Acces</font>',
-    keybind = Enum.KeyCode.End,
+    Title = '<font color="rgb(15, 159, 196)">Vital.wtf</font>. <font color="rgb(255, 0, 0)">Private Acces</font>',
+    keybind = Enum.KeyCode.RightBracket,
     Watermark = createWatermark(),
        Colors = {
-          libColor = Color3.fromRGB(115, 100, 215),
+          libColor = Color3.fromRGB(15, 159, 196),
           riskyColor = Color3.fromRGB(255, 0, 0),
           FontColor = Color3.fromRGB(255, 255, 255),
           MainColor = Color3.fromRGB(14, 14, 14),
-          AccentColor = Color3.fromRGB(115, 100, 215),
+          AccentColor = Color3.fromRGB(15, 159, 196),
           OutlineColor = Color3.fromRGB(15, 15, 15),
        },
        Enabled = true,
@@ -390,19 +383,14 @@ repeat
     
     menu.bg.Position = UDim2.new(0.5,-menu.bg.Size.X.Offset/2,0.5,-menu.bg.Size.Y.Offset/2)
     menu.Parent = CloneCore
-    menu.Name = "vital_gui"
+    menu.Name = "eclipse_gui"
     local ProtectGui = protectgui or (syn and syn.protect_gui) or (function() end)
     local CloneScreenGui = cloneref(Instance.new("ScreenGui"))
     ProtectGui(CloneScreenGui)   
     CloneScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Global
     CloneScreenGui.Parent = CloneCore
-    CloneScreenGui.Name = "vital_gui"
+    CloneScreenGui.Name = "eclipse_gui"
  
-
-
-    
-
-
     local menu_text_label = Instance.new("TextLabel", menu.bg)
     menu_text_label.Name = "pre"
     menu_text_label.RichText = true
@@ -410,10 +398,10 @@ repeat
     menu_text_label.BackgroundTransparency = 1.000
     menu_text_label.Position = UDim2.new(0, 4, 0, -43)
     menu_text_label.Size = UDim2.new(0, 802, 0, 24)
-    menu_text_label.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
+    menu_text_label.FontFace = Fonts.ProggyTiny
     menu_text_label.Text = library.Title
     menu_text_label.TextColor3 = Color3.fromRGB(75, 75, 75)
-    menu_text_label.TextSize = 18
+    menu_text_label.TextSize = 9
     menu_text_label.TextStrokeTransparency = 0.000
  
     local BottomBar = Instance.new("Frame", menu.bg)
@@ -434,11 +422,11 @@ repeat
     BuildLabel.BorderSizePixel = 0
     BuildLabel.Position = UDim2.new(0.0005, 1, 0, -10)
     BuildLabel.Size = UDim2.new(-0.00151476054, 200, 2.14484048, -1)
-    BuildLabel.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
+    BuildLabel.FontFace = Fonts.ProggyTiny
     BuildLabel.RichText = true
-    BuildLabel.Text = "build: <font color=\"rgb(115, 100, 215)\">Beta Acces</font>"
+    BuildLabel.Text = "build: <font color=\"rgb(15, 159, 196)\">private</font>"
     BuildLabel.TextColor3 = Color3.fromRGB(74, 74, 74)
-    BuildLabel.TextSize = 13
+    BuildLabel.TextSize = 9
     BuildLabel.TextWrapped = true
     BuildLabel.TextXAlignment = Enum.TextXAlignment.Left
  
@@ -449,16 +437,16 @@ repeat
     ActiveUserLabel.BorderSizePixel = 0
     ActiveUserLabel.Position = UDim2.new(1.0055, -204, -1.46925938, 1)
     ActiveUserLabel.Size = UDim2.new(0.00125635799, 200, 4.04341888, -1)
-    ActiveUserLabel.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
+    ActiveUserLabel.FontFace = Fonts.ProggyTiny
     ActiveUserLabel.RichText = true
-    ActiveUserLabel.Text = "Day Remain: <font color=\"rgb(115, 100, 215)\">7 Day</font>"
+    ActiveUserLabel.Text = "Day Remain: <font color=\"rgb(15, 159, 196)\">999 days</font>"
     ActiveUserLabel.TextColor3 = Color3.fromRGB(74, 74, 74)
-    ActiveUserLabel.TextSize = 10
+    ActiveUserLabel.TextSize = 9
     ActiveUserLabel.TextXAlignment = Enum.TextXAlignment.Right
  
     for _, obj in pairs(menu:GetDescendants()) do
         if obj.Name:lower():find('name_esp') then
-           obj.Text = '<font color="rgb(115, 100, 215)">' .. game.Players.LocalPlayer.Name .. '</font>'
+           obj.Text = '<font color="rgb(15, 159, 196)">' .. game.Players.LocalPlayer.Name .. '</font>'
         end
     end
     function library:visualize(state)
@@ -481,7 +469,7 @@ repeat
     end
     
     function library:CreateLabel(Properties, IsHud)
-        local _Instance = library:Create('TextLabel', {BackgroundTransparency = 1; FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular); TextColor3 = library.Colors.FontColor; TextSize = 10; TextStrokeTransparency = 0})
+        local _Instance = library:Create('TextLabel', {BackgroundTransparency = 1; FontFace = Fonts.ProggyTiny; TextColor3 = library.Colors.FontColor; TextSize = 9; TextStrokeTransparency = 0})
         library:AddToRegistry(_Instance, {TextColor3 = 'FontColor'}, IsHud)
         return library:Create(_Instance, Properties)
     end
@@ -505,7 +493,7 @@ repeat
     
         function library:Notify(Text, Time)
             local XSize, YSize = library:GetTextBounds(Text, Enum.Font.Code, 9); YSize = YSize + 8
-            local NotifyOuter = library:Create('Frame', {BorderColor3 = Color3.new(115, 100, 215); Position = UDim2.new(0, 100, 0, 10); Size = UDim2.new(0, 0, 0, YSize); ClipsDescendants = true; Transparency = 0; ZIndex = 100; Parent = library.NotificationArea})
+            local NotifyOuter = library:Create('Frame', {BorderColor3 = Color3.new(15, 159, 196); Position = UDim2.new(0, 100, 0, 10); Size = UDim2.new(0, 0, 0, YSize); ClipsDescendants = true; Transparency = 0; ZIndex = 100; Parent = library.NotificationArea})
             library:Create('UIGradient', {Color = ColorSequence.new{ColorSequenceKeypoint.new(0, library.Colors.MainColor), ColorSequenceKeypoint.new(0.1, library.Colors.MainColor), ColorSequenceKeypoint.new(0.6, library.Colors.MainColor), ColorSequenceKeypoint.new(1, library.Colors.MainColor)}, Rotation = -120; Parent = NotifyOuter})
             local NotifyInner = library:Create('Frame', {BackgroundColor3 = library.Colors.MainColor; BorderColor3 = library.Colors.OutlineColor; BorderMode = Enum.BorderMode.Inset; Size = UDim2.new(1, 0, 1, 0); ZIndex = 101; Parent = NotifyOuter})
             local InnerFrame = library:Create('Frame', {BackgroundColor3 = Color3.new(1, 1, 1); BorderSizePixel = 0; Position = UDim2.new(0, 1, 0, 1); Size = UDim2.new(1, -2, 1, -2); ZIndex = 102; Parent = NotifyInner})
@@ -514,7 +502,7 @@ repeat
             local Gradient = library:Create('UIGradient', {Color = ColorSequence.new({ColorSequenceKeypoint.new(0, library.Colors.MainColor), ColorSequenceKeypoint.new(1, library.Colors.MainColor)}); Rotation = -90; Parent = InnerFrame})
             library:AddToRegistry(NotifyInner, {BackgroundColor3 = 'MainColor'; BorderColor3 = 'OutlineColor';}, true)
             library:AddToRegistry(Gradient, {Color = function() return ColorSequence.new({ColorSequenceKeypoint.new(0, library.Colors.MainColor), ColorSequenceKeypoint.new(1, library.Colors.MainColor)}); end})
-            library:CreateLabel({Position = UDim2.new(0, 6, 0, 0); Size = UDim2.new(1, -4, 1, 0); Text = Text; TextXAlignment = Enum.TextXAlignment.Left; TextSize = 10; ZIndex = 103; Parent = InnerFrame})
+            library:CreateLabel({Position = UDim2.new(0, 6, 0, 0); Size = UDim2.new(1, -4, 1, 0); Text = Text; TextXAlignment = Enum.TextXAlignment.Left; TextSize = 9; ZIndex = 103; Parent = InnerFrame})
             pcall(NotifyOuter.TweenSize, NotifyOuter, UDim2.new(0, XSize + 42 + 4, 0, YSize), 'Out', 'Quad', 0.6, true)
             pcall(LeftColor.TweenSize, LeftColor, UDim2.new(0, 2, 0, 0), 'Out', 'Linear', 1, true)
             wait(0.9)
@@ -620,8 +608,8 @@ repeat
                         for i,v in next, library.tabbuttons do
                         local state = v == newButton
                         local tweenInfo = TweenInfo.new(0.3, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut)
-                        local imageTweenStart = TweenService:Create(v, tweenInfo, {ImageColor3 = Color3.fromRGB(115, 100, 215)})
-                        local textTweenStart = TweenService:Create(v.text, tweenInfo, {TextColor3 = Color3.fromRGB(115, 100, 215)})
+                        local imageTweenStart = TweenService:Create(v, tweenInfo, {ImageColor3 = Color3.fromRGB(15, 159, 196)})
+                        local textTweenStart = TweenService:Create(v.text, tweenInfo, {TextColor3 = Color3.fromRGB(15, 159, 196)})
                         local imageTweenEnd = TweenService:Create(v, tweenInfo, {ImageColor3 = Color3.fromRGB(25,25,25)})
                         local textTweenEnd = TweenService:Create(v.text, tweenInfo, {TextColor3 = Color3.fromRGB(125, 125, 125)})
                         if state then
@@ -689,10 +677,10 @@ repeat
                         title.BorderSizePixel = 0
                         title.Position = UDim2.new(0, 17, 0, 0)
                         title.ZIndex = 2
-                        title.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
+                        title.FontFace = Fonts.ProggyTiny
                         title.Text = groupname or ""
                         title.TextColor3 = Color3.fromRGB(255, 255, 255)
-                        title.TextSize = 10
+                        title.TextSize = 9
                         title.TextStrokeTransparency = 0.000
                         title.TextXAlignment = Enum.TextXAlignment.Left
  
@@ -754,10 +742,10 @@ repeat
                             text.BackgroundTransparency = 1.000
                             text.Position = UDim2.new(0, 22, 0, 0)
                             text.Size = UDim2.new(0, 0, 1, 2)
-                            text.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
+                            text.FontFace = Fonts.ProggyTiny
                             text.Text = args.text or args.flag
                             text.TextColor3 = Color3.fromRGB(155, 155, 155)
-                            text.TextSize = 10
+                            text.TextSize = 9
                             text.TextStrokeTransparency = 0.000
                             text.TextXAlignment = Enum.TextXAlignment.Left
  
@@ -767,10 +755,10 @@ repeat
                             button.BackgroundTransparency = 1.000
                             button.BorderSizePixel = 0
                             button.Size = UDim2.new(0, 101, 1, 0)
-                            button.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
+                            button.FontFace = Fonts.ProggyTiny
                             button.Text = ""
                             button.TextColor3 = Color3.fromRGB(0, 0, 0)
-                            button.TextSize = 10
+                            button.TextSize = 9
  
                             local state = args.default
                             if args.risky then text.TextColor3 = state and Color3.fromRGB(255, 0, 0) or Color3.fromRGB(139, 0, 0) end
@@ -831,9 +819,9 @@ repeat
                                 Name.BorderSizePixel = 1
                                 Name.Position = UDim2.new(0.5, 0, -1.85000002, 0)
                                 Name.Size = UDim2.new(1, 0, 1, 0)
-                                Name.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
+                                Name.FontFace = Fonts.ProggyTiny
                                 Name.TextColor3 = Color3.fromRGB(125, 125, 125)
-                                Name.TextSize = 10
+                                Name.TextSize = 9
                                 Name.RichText = true
                                 Name.Visible = false
  
@@ -854,10 +842,10 @@ repeat
                                 button.BorderSizePixel = 1
                                 button.Position = UDim2.new(0.1, 0, 0, 2)
                                 button.Size = UDim2.new(0.9, 0, 1, 0)
-                                button.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
+                                button.FontFace = Fonts.ProggyTiny
                                 button.Text = ""
                                 button.TextColor3 = Color3.fromRGB(155, 155, 155)
-                                button.TextSize = 10
+                                button.TextSize = 9
                                 button.TextStrokeTransparency = 0.000
                                 button.TextXAlignment = Enum.TextXAlignment.Center
  
@@ -890,14 +878,14 @@ repeat
                                         if args.gui then
                                             Name.Visible = true
                                             if args.type == "hold" then
-                                                Name.Text = "<font color=\"rgb(255,255,255)\">" ..args.text.. ":</font>".." <font color=\"rgb(115, 100, 215)\">" .."["..keyName.."]".. "</font> ("..args.type..")"
+                                                Name.Text = "<font color=\"rgb(255,255,255)\">" ..args.text.. ":</font>".." <font color=\"rgb(15, 159, 196)\">" .."["..keyName.."]".. "</font> ("..args.type..")"
                                             else
                                                 if not Toggle then
                                                     Toggle = true
-                                                    Name.Text = "<font color=\"rgb(255,255,255)\">" ..args.text.. ":</font>".." <font color=\"rgb(115, 100, 215)\">" .."["..keyName.."]".. "</font> ("..args.type..")"
+                                                    Name.Text = "<font color=\"rgb(255,255,255)\">" ..args.text.. ":</font>".." <font color=\"rgb(15, 159, 196)\">" .."["..keyName.."]".. "</font> ("..args.type..")"
                                                 else
                                                     Toggle = false
-                                                    Name.Text = "<font color=\"rgb(125, 125, 125)\">" ..args.text.. ": /font>".." <font color=\"rgb(115, 100, 215)\">" .."["..keyName.."]".. "</font> ("..args.type..")"
+                                                    Name.Text = "<font color=\"rgb(125, 125, 125)\">" ..args.text.. ": /font>".." <font color=\"rgb(15, 159, 196)\">" .."["..keyName.."]".. "</font> ("..args.type..")"
                                                 end
                                             end
                                         end
@@ -912,14 +900,14 @@ repeat
                                     if args.gui then
                                         Name.Visible = true
                                         if args.type == "hold" then
-                                            Name.Text = "<font color=\"rgb(255,255,255)\">" ..args.text.. ":</font>".." <font color=\"rgb(115, 100, 215)\">" .."["..keyName.."]".. "</font> ("..args.type..")"
+                                            Name.Text = "<font color=\"rgb(255,255,255)\">" ..args.text.. ":</font>".." <font color=\"rgb(15, 159, 196)\">" .."["..keyName.."]".. "</font> ("..args.type..")"
                                         else
                                             if not Toggle then
                                                 Toggle = true
-                                                Name.Text = "<font color=\"rgb(255,255,255)\">" ..args.text.. ":</font>".." <font color=\"rgb(115, 100, 215)\">" .."["..keyName.."]".. "</font> ("..args.type..")"
+                                                Name.Text = "<font color=\"rgb(255,255,255)\">" ..args.text.. ":</font>".." <font color=\"rgb(15, 159, 196)\">" .."["..keyName.."]".. "</font> ("..args.type..")"
                                             else
                                                 Toggle = false
-                                                Name.Text = "<font color=\"rgb(125, 125, 125)\">" ..args.text.. ":</font>".." <font color=\"rgb(115, 100, 215)\">" .."["..keyName.."]".. "</font> ("..args.type..")"
+                                                Name.Text = "<font color=\"rgb(125, 125, 125)\">" ..args.text.. ":</font>".." <font color=\"rgb(15, 159, 196)\">" .."["..keyName.."]".. "</font> ("..args.type..")"
                                             end
                                         end
                                     end
@@ -944,9 +932,9 @@ repeat
                                                 if args.gui then
                                                     Name.Visible = true
                                                     if args.type == "hold" then
-                                                        Name.Text = "<font color=\"rgb(125, 125, 125)\">" ..args.text.. ":</font>".." <font color=\"rgb(115, 100, 215)\">" .."["..keyName.."]".. "</font> ("..args.type..")"
+                                                        Name.Text = "<font color=\"rgb(125, 125, 125)\">" ..args.text.. ":</font>".." <font color=\"rgb(15, 159, 196)\">" .."["..keyName.."]".. "</font> ("..args.type..")"
                                                     else
-                                                        Name.Text = "<font color=\"rgb(125, 125, 125)\">" ..args.text.. ":</font>".." <font color=\"rgb(115, 100, 215)\">" .."["..keyName.."]".. "</font> ("..args.type..")"
+                                                        Name.Text = "<font color=\"rgb(125, 125, 125)\">" ..args.text.. ":</font>".." <font color=\"rgb(15, 159, 196)\">" .."["..keyName.."]".. "</font> ("..args.type..")"
                                                     end
                                                 end
                                             end
@@ -978,7 +966,7 @@ repeat
                                 local keyName = tostring(args.key):split(".")[3] -- Extracts the key name from the enum value
                                 if args.gui then
                                     Name.Visible = true
-                                    Name.Text = args.text..": <font color=\"rgb(115, 100, 215)\">" .."["..keyName.."]".. "</font> ("..args.type..")"
+                                    Name.Text = args.text..": <font color=\"rgb(15, 159, 196)\">" .."["..keyName.."]".. "</font> ("..args.type..")"
                                 end
  
                                 updateValue(args.key or Enum.KeyCode.Unknown)
@@ -1039,9 +1027,9 @@ repeat
                                 button2.BackgroundTransparency = 1.000
                                 button2.Size = UDim2.new(1, 0, 1, 0)
                                 button2.Text = ""
-                                button2.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
+                                button2.FontFace = Fonts.ProggyTiny
                                 button2.TextColor3 = Color3.fromRGB(0, 0, 0)
-                                button2.TextSize = 10
+                                button2.TextSize = 9
  
                                 colorFrame.Name = "colorFrame"
                                 colorFrame.Parent = toggleframe
@@ -1244,10 +1232,10 @@ repeat
                             button.BackgroundTransparency = 1.000
                             button.BorderSizePixel = 0
                             button.Size = UDim2.new(1, 0, 1, 0)
-                            button.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
+                            button.FontFace = Fonts.ProggyTiny
                             button.Text = args.text or args.flag
                             button.TextColor3 = Color3.fromRGB(255, 255, 255)
-                            button.TextSize = 10
+                            button.TextSize = 9
                             button.TextStrokeTransparency = 0.000
  
                             gradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(59, 59, 59)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(83, 83, 83))}
@@ -1327,19 +1315,19 @@ repeat
                             button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
                             button.BackgroundTransparency = 1.000
                             button.Size = UDim2.new(0, 191, 1, 0)
-                            button.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
+                            button.FontFace = Fonts.ProggyTiny
                             button.Text = ""
                             button.TextColor3 = Color3.fromRGB(0, 0, 0)
-                            button.TextSize = 10
+                            button.TextSize = 9
  
                             valuetext.Parent = main
                             valuetext.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
                             valuetext.BackgroundTransparency = 1.000
                             valuetext.Position = UDim2.new(0.5, 0, 0.5, 0)
-                            valuetext.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
+                            valuetext.FontFace = Fonts.ProggyTiny
                             valuetext.Text = "1/10"
                             valuetext.TextColor3 = Color3.fromRGB(255, 255, 255)
-                            valuetext.TextSize = 10
+                            valuetext.TextSize = 9
                             valuetext.TextStrokeTransparency = 0.000
  
                             UIGradient.Color = ColorSequence.new{ColorSequenceKeypoint.new(0.00, Color3.fromRGB(105, 105, 105)), ColorSequenceKeypoint.new(1.00, Color3.fromRGB(121, 121, 121))}
@@ -1352,10 +1340,10 @@ repeat
                             text.BackgroundTransparency = 1.000
                             text.Position = UDim2.new(0.0299999993, -1, 0, 7)
                             text.ZIndex = 2
-                            text.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
+                            text.FontFace = Fonts.ProggyTiny
                             text.Text = args.text or args.flag
                             text.TextColor3 = Color3.fromRGB(244, 244, 244)
-                            text.TextSize = 10
+                            text.TextSize = 9
                             text.TextStrokeTransparency = 0.000
                             text.TextXAlignment = Enum.TextXAlignment.Left
  
@@ -1369,10 +1357,10 @@ repeat
                             textAdd.BackgroundTransparency = 1.000
                             textAdd.Position = UDim2.new(0.9111111111, -1, 0, 7)
                             textAdd.ZIndex = 2
-                            textAdd.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
+                            textAdd.FontFace = Fonts.ProggyTiny
                             textAdd.Text = "+"
                             textAdd.TextColor3 = Color3.fromRGB(125, 125, 125)
-                            textAdd.TextSize = 10
+                            textAdd.TextSize = 9
                             textAdd.TextStrokeTransparency = 0.000
                             textAdd.TextXAlignment = Enum.TextXAlignment.Left
  
@@ -1382,10 +1370,10 @@ repeat
                             textRemove.BackgroundTransparency = 1.000
                             textRemove.Position = UDim2.new(0.9599999999, -1, 0, 7)
                             textRemove.ZIndex = 2
-                            textRemove.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
+                            textRemove.FontFace = Fonts.ProggyTiny
                             textRemove.Text = "-"
                             textRemove.TextColor3 = Color3.fromRGB(125, 125, 125)
-                            textRemove.TextSize = 10
+                            textRemove.TextSize = 9
                             textRemove.TextStrokeTransparency = 0.000
                             textRemove.TextXAlignment = Enum.TextXAlignment.Left
  
@@ -1516,10 +1504,10 @@ repeat
                             box.BackgroundTransparency = 1.000
                             box.Selectable = false
                             box.Size = UDim2.new(1, 0, 1, 0)
-                            box.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
+                            box.FontFace = Fonts.ProggyTiny
                             box.Text = args.value or ""
                             box.TextColor3 = Color3.fromRGB(255, 255, 255)
-                            box.TextSize = 10
+                            box.TextSize = 9
                             box.TextStrokeTransparency = 0.000
                             box.TextXAlignment = Enum.TextXAlignment.Left
  
@@ -1534,10 +1522,10 @@ repeat
                             text.BackgroundTransparency = 1.000
                             text.Position = UDim2.new(0.0299999993, -1, 0, 7)
                             text.ZIndex = 2
-                            text.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
+                            text.FontFace = Fonts.ProggyTiny
                             text.Text = args.text or args.flag
                             text.TextColor3 = Color3.fromRGB(244, 244, 244)
-                            text.TextSize = 10
+                            text.TextSize = 9
                             text.TextStrokeTransparency = 0.000
                             text.TextXAlignment = Enum.TextXAlignment.Left
  
@@ -1593,10 +1581,10 @@ repeat
                             Text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
                             Text.BackgroundTransparency = 1.000
                             Text.Position = UDim2.new(0.02, -1, 0, 10)
-                            Text.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
+                            Text.FontFace = Fonts.ProggyTiny
                             Text.Text = args.text
                             Text.TextColor3 = Color3.fromRGB(244, 244, 244)
-                            Text.TextSize = 10
+                            Text.TextSize = 9
                             Text.TextStrokeTransparency = 0.000
                             Text.TextXAlignment = Enum.TextXAlignment.Left
                         end
@@ -1647,10 +1635,10 @@ repeat
                             button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
                             button.BackgroundTransparency = 1.000
                             button.Size = UDim2.new(0, 191, 1, 0)
-                            button.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
+                            button.FontFace = Fonts.ProggyTiny
                             button.Text = ""
                             button.TextColor3 = Color3.fromRGB(0, 0, 0)
-                            button.TextSize = 10
+                            button.TextSize = 9
  
                             dumbtriangle.Name = "dumbtriangle"
                             dumbtriangle.Parent = main
@@ -1670,10 +1658,10 @@ repeat
                             valuetext.BackgroundTransparency = 1.000
                             valuetext.Position = UDim2.new(0.00200000009, 2, 0, 7)
                             valuetext.ZIndex = 2
-                            valuetext.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
+                            valuetext.FontFace = Fonts.ProggyTiny
                             valuetext.Text = ""
                             valuetext.TextColor3 = Color3.fromRGB(244, 244, 244)
-                            valuetext.TextSize = 10
+                            valuetext.TextSize = 9
                             valuetext.TextStrokeTransparency = 0.000
                             valuetext.TextXAlignment = Enum.TextXAlignment.Left
  
@@ -1688,10 +1676,10 @@ repeat
                             text.BackgroundTransparency = 1.000
                             text.Position = UDim2.new(0.0299999993, -1, 0, 7)
                             text.ZIndex = 2
-                            text.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
+                            text.FontFace = Fonts.ProggyTiny
                             text.Text = args.text or args.flag
                             text.TextColor3 = Color3.fromRGB(244, 244, 244)
-                            text.TextSize = 10
+                            text.TextSize = 9
                             text.TextStrokeTransparency = 0.000
                             text.TextXAlignment = Enum.TextXAlignment.Left
  
@@ -1795,11 +1783,11 @@ repeat
                                     button_2.BackgroundTransparency = 0.850
                                     button_2.BorderSizePixel = 0
                                     button_2.Size = UDim2.new(1, 0, 1, 0)
-                                    button_2.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
+                                    button_2.FontFace = Fonts.ProggyTiny
                                     button_2.BorderColor3 = Color3.fromRGB(25,25,25)
                                     button_2.Text = ""
                                     button_2.TextColor3 = Color3.fromRGB(0, 0, 0)
-                                    button_2.TextSize = 10
+                                    button_2.TextSize = 9
  
                                     text_2.Name = "off"
                                     text_2.Parent = option
@@ -1807,10 +1795,10 @@ repeat
                                     text_2.BackgroundTransparency = 1.000
                                     text_2.Position = UDim2.new(0, 4, 0, 0)
                                     text_2.Size = UDim2.new(0, 0, 1, 0)
-                                    text_2.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
+                                    text_2.FontFace = Fonts.ProggyTiny
                                     text_2.Text = v
                                     text_2.TextColor3 = args.multiselect and Color3.fromRGB(125, 125, 125) or library.Colors.libColor
-                                    text_2.TextSize = 10
+                                    text_2.TextSize = 9
                                     text_2.TextStrokeTransparency = 0.000
                                     text_2.TextXAlignment = Enum.TextXAlignment.Left
  
@@ -1985,10 +1973,10 @@ repeat
                                     text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
                                     text.BackgroundTransparency = 1.000
                                     text.Size = UDim2.new(1, 0, 0, 18)
-                                    text.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
+                                    text.FontFace = Fonts.ProggyTiny
                                     text.Text = v
                                     text.TextColor3 = Color3.fromRGB(255, 255, 255)
-                                    text.TextSize = 10
+                                    text.TextSize = 9
                                     text.TextStrokeTransparency = 0.000
  
                                     button.MouseButton1Click:Connect(function()
@@ -2046,10 +2034,10 @@ repeat
                             text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
                             text.BackgroundTransparency = 1.000
                             text.Position = UDim2.new(0.02, -1, 0, 10)
-                            text.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
+                            text.FontFace = Fonts.ProggyTiny
                             text.Text = args.text or args.flag
                             text.TextColor3 = Color3.fromRGB(244, 244, 244)
-                            text.TextSize = 10
+                            text.TextSize = 9
                             text.TextStrokeTransparency = 0.000
                             text.TextXAlignment = Enum.TextXAlignment.Left
  
@@ -2059,10 +2047,10 @@ repeat
                             button.BackgroundTransparency = 1.000
                             button.BorderSizePixel = 0
                             button.Size = UDim2.new(1, 0, 1, 0)
-                            button.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
+                            button.FontFace = Fonts.ProggyTiny
                             button.Text = ""
                             button.TextColor3 = Color3.fromRGB(0, 0, 0)
-                            button.TextSize = 10
+                            button.TextSize = 9
  
                             colorpicker_2.Name = "colorpicker"
                             colorpicker_2.Parent = colorpicker
@@ -2096,11 +2084,11 @@ repeat
                             button.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
                             button.BackgroundTransparency = 1.000
                             button.Size = UDim2.new(0, 202, 0, 22)
-                            button.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
+                            button.FontFace = Fonts.ProggyTiny
                             button.Text = ""
                             button.ZIndex = args.ontop and topStuff or jigCount
                             button.TextColor3 = Color3.fromRGB(0, 0, 0)
-                            button.TextSize = 10
+                            button.TextSize = 9
  
                             colorFrame.Name = "colorFrame"
                             colorFrame.Parent = colorpicker
@@ -2162,10 +2150,10 @@ repeat
                             CurrentColorFrame_Text.BackgroundTransparency = 1.000
                             CurrentColorFrame_Text.BorderSizePixel = 0
                             CurrentColorFrame_Text.Size = UDim2.new(1, 0, 1, 0)
-                            CurrentColorFrame_Text.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
+                            CurrentColorFrame_Text.FontFace = Fonts.ProggyTiny
                             CurrentColorFrame_Text.Text = args.text or args.flag
                             CurrentColorFrame_Text.TextColor3 = library.Colors.libColor
-                            CurrentColorFrame_Text.TextSize = 10
+                            CurrentColorFrame_Text.TextSize = 9
                             CurrentColorFrame_Text.TextStrokeTransparency = 0.000
  
                             main_2.Name = "main"
@@ -2306,10 +2294,10 @@ repeat
                             text.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
                             text.BackgroundTransparency = 1.000
                             text.Position = UDim2.new(0.02, -1, 0, 10)
-                            text.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
+                            text.FontFace = Fonts.ProggyTiny
                             text.Text = args.text or args.flag
                             text.TextColor3 = Color3.fromRGB(244, 244, 244)
-                            text.TextSize = 10
+                            text.TextSize = 9
                             text.TextStrokeTransparency = 0.000
                             text.TextXAlignment = Enum.TextXAlignment.Left
  
@@ -2319,10 +2307,10 @@ repeat
                             button.BorderSizePixel = 0
                             button.Position = UDim2.new(7.09711117e-08, 0, 0, 0)
                             button.Size = UDim2.new(0.02, 0, 1, 0)
-                            button.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
+                            button.FontFace = Fonts.ProggyTiny
                             button.Text = "--"
                             button.TextColor3 = Color3.fromRGB(155, 155, 155)
-                            button.TextSize = 10
+                            button.TextSize = 9
                             button.TextStrokeTransparency = 0.000
                             button.TextXAlignment = Enum.TextXAlignment.Right
  
@@ -2369,7 +2357,7 @@ repeat
                             if v == x then return true end
                             end return false end
                             function library:createConfig()
-                                makefolder("vital.wtf")
+                                makefolder("wireless")
                                 local name = library.flags["config_name"]
                                 if contains(library.options["config_box"].values, name) then return library:Notify(name..".cfg already exists!", 5) end
                                 if name == "" then return library:Notify("You need to put a name in!", 5) end
@@ -2381,14 +2369,14 @@ repeat
                                 else jig[i] = v
                                 end
                             end
-                            writefile("vital.wtf/"..name..".cfg",game:GetService("HttpService"):JSONEncode(jig))
+                            writefile("wireless/"..name..".cfg",game:GetService("HttpService"):JSONEncode(jig))
                             library:Notify("Succesfully created config "..name..".cfg!", 5)
                             library:refreshConfigs()
                         end
  
                         function library:saveConfig()
                             pcall(function()
-                                makefolder("vital.wtf")
+                                makefolder("wireless")
                                 local name = library.flags["config_box"]
                                 if not name then
                                     return
@@ -2452,8 +2440,9 @@ repeat
  
                 function library:refreshConfigs()
                     local tbl = {}
-                    for i,v in next, listfiles("vital.wtf") do table.insert(tbl,v) end
+                    for i,v in next, listfiles("wireless") do table.insert(tbl,v) end
                     library.options["config_box"].refresh(tbl)
                 end      
-            end)()                         
+            end)()        
+            
             return library
