@@ -17,10 +17,10 @@ repeat
  local tabviewer = menu.bg.bg.bg.bg.bg.bg.tabbuttons;
  for _, obj in pairs(menu:GetDescendants()) do
     if obj.Name:lower():find('userlabel') then
-        obj.Text = ': <font color="rgb(115, 100, 215)">' ..  .. '</font>'
+        obj.Text = 'Day remain: <font color="rgb(115, 100, 215)">' .. game.Players.LocalPlayer.Name .. '</font>'
     end
     if obj.Name:lower():find('buildlabel') then
-        obj.Text = 'build: <font color="rgb(115, 100, 215)">Paid</font>'
+        obj.Text = 'build: <font color="rgb(115, 100, 215)">v3.1.0</font>'
     end
  end
  
