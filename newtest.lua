@@ -91,6 +91,7 @@ repeat
  local UIListLayout = Instance.new("UIListLayout", Tab)
  local Name_2 = Instance.new("TextLabel", Tab)
  local Name_3 = Instance.new("TextLabel", Tab)
+ local Name_4 = Instance.new("TextLabel", Tab)
 
  Keybinds.Name = "Keybinds"
  Keybinds.Parent = CloneCore
@@ -175,6 +176,24 @@ repeat
  Name_3.BorderSizePixel = 1
  Name_3.RichText = true
  Name_3.Visible = true
+
+ Name_4.Name = "Name"
+ Name_4.AnchorPoint = Vector2.new(0.5, 0.5)
+ Name_4.BackgroundColor3 = Color3.fromRGB(11, 11, 11)
+ Name_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ Name_4.BorderSizePixel = 0
+ Name_4.Position = UDim2.new(0.5, 0, -1.85000002, 0)
+ Name_4.Size = UDim2.new(1, 0, 1, 0)
+ Name_4.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
+ Name_4.Text = "Speed Hack: <font color=\"rgb(115, 100, 215)\">[Right Shift]</font>"
+ Name_4.TextColor3 = Color3.fromRGB(125, 125, 125)
+ Name_4.TextSize = 10
+ Name_4.BorderSizePixel = 1
+ Name_4.RichText = true
+ Name_4.Visible = true
+
+
+
 
  local dragging
  local dragInput
