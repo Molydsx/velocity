@@ -25,7 +25,7 @@ repeat
  end
  
  --vars
- local CloneCore = cloneref(game.CoreGui)
+ local CloneCore = game:GetService("CoreGui")
  local CloneScreenGui = cloneref(Instance.new("ScreenGui"))
  local RunService = game:GetService("RunService")
  local Mouse = game:GetService("Players").LocalPlayer:GetMouse()
