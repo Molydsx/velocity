@@ -90,7 +90,8 @@ repeat
  local Element = Instance.new("Frame", Background)
  local UIListLayout = Instance.new("UIListLayout", Tab)
  local Name_2 = Instance.new("TextLabel", Tab)
- 
+ local Name_3 = Instance.new("TextLabel", Tab)
+
  Keybinds.Name = "Keybinds"
  Keybinds.Parent = CloneCore
  Keybinds.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
@@ -159,6 +160,22 @@ repeat
  Name_2.RichText = true
  Name_2.Visible = true
  
+ 
+ Name_3.Name = "Name"
+ Name_3.AnchorPoint = Vector2.new(0.5, 0.5)
+ Name_3.BackgroundColor3 = Color3.fromRGB(11, 11, 11)
+ Name_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ Name_3.BorderSizePixel = 0
+ Name_3.Position = UDim2.new(0.5, 0, -1.85000002, 0)
+ Name_3.Size = UDim2.new(1, 0, 1, 0)
+ Name_3.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
+ Name_3.Text = "AimBot (Head): <font color=\"rgb(115, 100, 215)\">[MB2]</font>"
+ Name_3.TextColor3 = Color3.fromRGB(125, 125, 125)
+ Name_3.TextSize = 10
+ Name_3.BorderSizePixel = 1
+ Name_3.RichText = true
+ Name_3.Visible = true
+
  local dragging
  local dragInput
  local dragStart
@@ -302,7 +319,7 @@ repeat
  end
  
  local library = {
-    Title = 'Vital.<font color="rgb(115, 100, 215)">wtf</font> || Beta Acces',
+    Title = '<font color="rgb(115, 100, 215)">Vital.wtf</font> || Beta Acces',
     keybind = Enum.KeyCode.End,
     Watermark = createWatermark(),
        Colors = {
@@ -377,7 +394,7 @@ repeat
     menu_text_label.FontFace = Font.fromId(12187362578, Enum.FontWeight.Regular)
     menu_text_label.Text = library.Title
     menu_text_label.TextColor3 = Color3.fromRGB(75, 75, 75)
-    menu_text_label.TextSize = 10
+    menu_text_label.TextSize = 18
     menu_text_label.TextStrokeTransparency = 0.000
  
     local BottomBar = Instance.new("Frame", menu.bg)
