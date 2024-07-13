@@ -616,7 +616,7 @@ repeat
  
                         newButton.MouseButton1Click:Connect(function()
                         for i,v in next, library.tabs do v.Visible = v == newTab end
-                        for i,v in next, library.toInvis do v.Visible = false end
+                        for i,v in next, library.toInvis do v.Visible = true end
                         for i,v in next, library.tabbuttons do
                         local state = v == newButton
                         local tweenInfo = TweenInfo.new(0.3, Enum.EasingStyle.Linear, Enum.EasingDirection.InOut)
