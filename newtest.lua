@@ -49,7 +49,6 @@ repeat
     LPH_ENCSTR = function(...) return ... end
     LPH_STRENC = function(...) return ... end
     LPH_HOOK_FIX = function(...) return ... end
-    LPH_CRASH = function() return print(debug.traceback()) end
  end
  
  -- custom fonts
