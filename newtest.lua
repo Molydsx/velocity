@@ -304,7 +304,7 @@ repeat
  
  local library = {
     Title = 'Vital.<font color="rgb(115, 100, 215)">wtf</font> || Beta Acces',
-    keybind = Enum.KeyCode.RightBracket,
+    keybind = Enum.KeyCode.End,
     Watermark = createWatermark(),
        Colors = {
           libColor = Color3.fromRGB(115, 100, 215),
