@@ -32,6 +32,11 @@ repeat
  local InputService = game:GetService("UserInputService")
  local TweenService = game:GetService("TweenService")
  local HttpService = cloneref(game:GetService("HttpService"))
+ local Camera = Workspace.CurrentCamera
+ local RunService = game:GetService("RunService")
+ local Mouse = game:GetService("Players").LocalPlayer:GetMouse()
+ local InputService = game:GetService("UserInputService")
+ local TweenService = game:GetService("TweenService")
  
  --// LPH
  if not LPH_OBFUSCATED then
