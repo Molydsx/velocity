@@ -101,7 +101,7 @@ repeat
  Background.BorderColor3 = Color3.fromRGB(25, 25, 25)
  Background.Position = UDim2.new(0.01, 0, 0.488, 0)
  Background.Size = UDim2.new(0, 180, 0, 24)
- Background.Visible = false
+ Background.Visible = true
  
  Gradient.Name = "Gradient"
  Gradient.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -157,7 +157,7 @@ repeat
  Name_2.TextSize = 10
  Name_2.BorderSizePixel = 1
  Name_2.RichText = true
- Name_2.Visible = false
+ Name_2.Visible = true
  
  local dragging
  local dragInput
