@@ -401,7 +401,7 @@ repeat
     menu_text_label.FontFace = Fonts.ProggyTiny
     menu_text_label.Text = library.Title
     menu_text_label.TextColor3 = Color3.fromRGB(75, 75, 75)
-    menu_text_label.TextSize = 9
+    menu_text_label.TextSize = 11
     menu_text_label.TextStrokeTransparency = 0.000
  
     local BottomBar = Instance.new("Frame", menu.bg)
@@ -424,7 +424,7 @@ repeat
     BuildLabel.Size = UDim2.new(-0.00151476054, 200, 2.14484048, -1)
     BuildLabel.FontFace = Fonts.ProggyTiny
     BuildLabel.RichText = true
-    BuildLabel.Text = "build: <font color=\"rgb(15, 159, 196)\">private</font>"
+    BuildLabel.Text = "build: <font color=\"rgb(15, 159, 196)\">v3.1.0</font>"
     BuildLabel.TextColor3 = Color3.fromRGB(74, 74, 74)
     BuildLabel.TextSize = 9
     BuildLabel.TextWrapped = true
@@ -439,7 +439,7 @@ repeat
     ActiveUserLabel.Size = UDim2.new(0.00125635799, 200, 4.04341888, -1)
     ActiveUserLabel.FontFace = Fonts.ProggyTiny
     ActiveUserLabel.RichText = true
-    ActiveUserLabel.Text = "active user: <font color=\"rgb(15, 159, 196)\">999 days</font>"
+    ActiveUserLabel.Text = "Vital.wtf: <font color=\"rgb(15, 159, 196)\"Apocalypse Rising 2|Private</font>"
     ActiveUserLabel.TextColor3 = Color3.fromRGB(74, 74, 74)
     ActiveUserLabel.TextSize = 9
     ActiveUserLabel.TextXAlignment = Enum.TextXAlignment.Right
