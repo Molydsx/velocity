@@ -419,7 +419,7 @@ repeat
     BuildLabel.RichText = true
     BuildLabel.Text = "build: <font color=\"rgb(115, 100, 215)\">Beta Acces</font>"
     BuildLabel.TextColor3 = Color3.fromRGB(74, 74, 74)
-    BuildLabel.TextSize = 10
+    BuildLabel.TextSize = 13
     BuildLabel.TextWrapped = true
     BuildLabel.TextXAlignment = Enum.TextXAlignment.Left
  
