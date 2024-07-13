@@ -331,7 +331,7 @@ repeat
  end
  
  local library = {
-    Title = '<font color="rgb(15, 159, 196)">Vital.wft</font>|<font color="rgb(255, 0, 0)">Private</font>| <font color="rgb(0, 255, 0)">Apocalypse Rising 2</font> ',
+    Title = '<font color="rgb(15, 159, 196)">Vital.wft</font>|<font color="rgb(255, 0, 0)">Private</font>|<font color="rgb(0, 255, 0)">Apocalypse Rising 2</font> ',
     keybind = Enum.KeyCode.RightBracket,
     Watermark = createWatermark(),
        Colors = {
