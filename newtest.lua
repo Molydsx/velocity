@@ -209,7 +209,7 @@ repeat
     WatermarkFrame.BorderColor3 = Color3.fromRGB(115, 100, 215)
     WatermarkFrame.BorderSizePixel = 2
     WatermarkFrame.Position = UDim2.new(0.0452012382, 33, 0.0223325081, -48)
-    WatermarkFrame.Size = UDim2.new(0, 200, 0, 20)
+    WatermarkFrame.Size = UDim2.new(0, 300, 0, 20)
     WatermarkFrame.Visible = true
     
     WaterMarkLabel.Parent = WatermarkFrame
